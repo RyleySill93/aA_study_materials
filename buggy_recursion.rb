@@ -11,9 +11,9 @@ def range(min, max)
 end
 
 puts "---RANGE---"
-puts "easy: #{range(1,1)} should equal [1]"
-puts "medium: #{range(-3,5)} should equal [-3, -2, -1, 0, 1, 2, 3, 4, 5]"
-puts "hard: #{range(5,2)} should equal []"
+puts "easy: #{range(1,1) == [1]}"
+puts "medium: #{range(-3,5) == [-3, -2, -1, 0, 1, 2, 3, 4, 5]}"
+puts "hard: #{range(5,2) == []}"
 puts " "
 
 # def sum_arr(arr)
@@ -22,9 +22,9 @@ puts " "
 # end
 #
 # puts "---SUM_ARR---"
-# puts "easy: #{sum_arr([1])} should equal 1"
-# puts "medium: #{sum_arr([1,2,3,4])} should equal 10"
-# puts "hard: #{sum_arr([1,-2,3,4,11,-5])} should equal 12"
+# puts "easy: #{sum_arr([1]) == 1}"
+# puts "medium: #{sum_arr([1,2,3,4]) == 10}"
+# puts "hard: #{sum_arr([1,-2,3,4,11,-5]) == 12}"
 # puts " "
 #
 # def fib(n)
@@ -34,9 +34,9 @@ puts " "
 # end
 #
 # puts "---FIB---"
-# puts "easy: #{fib(0)} should equal [0]"
-# puts "medium: #{fib(3)} should equal [0, 1, 1, 2]"
-# puts "hard: #{fib(9)} should equal [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]"
+# puts "easy: #{fib(1) == [0]}"
+# puts "medium: #{fib(3) == [0, 1, 1, 2]}"
+# puts "hard: #{fib(9) == [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]}"
 # puts " "
 #
 #
@@ -50,13 +50,14 @@ puts " "
 #         arr << el
 #       end
 #     end
+#     arr
 #   end
 # end
 #
 # puts "---DEEP_DUP---"
-# puts "easy: #{[1].deep_dup} should equal [1]"
-# puts "medium: #{[1,[2,3]].deep_dup} should equal [1,[2,3]]"
-# puts "hard: #{[[1], 2, 3, [2,3,4,[5,6]], [6]].deep_dup} should equal [[1], 2, 3, [2,3,4,[5,6]], [6]]}"
+# puts "easy: #{[1,[2]].deep_dup == [1,[2]]}"
+# puts "medium: #{[1,[2,3]].deep_dup == [1,[2,3]]}"
+# puts "hard: #{[[1], 2, 3, [2,3,4,[5,6]], [6]].deep_dup == [[1], 2, 3, [2,3,4,[5,6]], [6]]}"
 # puts " "
 #
 # class Array
@@ -64,19 +65,19 @@ puts " "
 #     arr = []
 #     self.each do |el|
 #       if el.is_a?(Array)
-#         arr << el.my_flatten
+#         el.my_flatten
 #       else
 #         arr << el
 #       end
 #     end
-#     arr
+#     [arr]
 #   end
 # end
 #
 # puts "---MY_FLATTEN---"
-# puts "easy: #{[1].my_flatten} should equal [1]"
-# puts "medium: #{[1,[2,3]].my_flatten} should equal [1,2,3]"
-# puts "hard: #{[[1], 2, 3, [2,3,4,[5,6]], [6]].my_flatten} should equal [1, 2, 3, 2, 3, 4, 5, 6, 6]"
+# puts "easy: #{[1].my_flatten == [1]}"
+# puts "medium: #{[1,[2,3]].my_flatten == [1,2,3]}"
+# puts "hard: #{[[1], 2, 3, [2,3,4,[5,6]], [6]].my_flatten == [1, 2, 3, 2, 3, 4, 5, 6, 6]}"
 # puts " "
 #
 # def permutations(arr)
@@ -93,9 +94,9 @@ puts " "
 # end
 #
 # puts "---PERMUTATIONS---"
-# puts "easy: #{permutations([1])} should equal [1]"
-# puts "medium: #{permutations([1,2])} should equal [[1, 2], [2, 1]]"
-# puts "hard: #{permutations([1,2,3])} should equal [[1, 2, 3], [2, 1, 3], [2, 3, 1], [1, 3, 2], [3, 1, 2], [3, 2, 1]]"
+# puts "easy: #{permutations([1]) == [[1]]}"
+# puts "medium: #{permutations([1,2]) == [[1, 2], [2, 1]]}"
+# puts "hard: #{permutations([1,2,3]) == [[1, 2, 3], [2, 1, 3], [2, 3, 1], [1, 3, 2], [3, 1, 2], [3, 2, 1]]}"
 # puts " "
 #
 # def quick_sort(arr)
@@ -107,7 +108,7 @@ puts " "
 # end
 #
 # puts "---QUICK_SORT---"
-# puts "easy: #{quick_sort([1])} should equal [1]"
-# puts "medium: #{quick_sort([-1, 0, 2, 4, 10, 23])} should equal [-1, 0, 2, 4, 10, 23]"
-# puts "hard (check duplicates!!!): #{quick_sort([-1, -1, 0, 2, 4, 10, 4])} should equal [-1, -1, 0, 2, 4, 4, 10]"
+# puts "easy: #{quick_sort([1]) == [1]}"
+# puts "medium: #{quick_sort([-1, 0, 2, 4, 10, 23]) == [-1, 0, 2, 4, 10, 23]}"
+# puts "hard: #{quick_sort([-1, -1, 0, 2, 4, 10, 4]) == [-1, -1, 0, 2, 4, 4, 10]}"
 # puts " "
