@@ -64,7 +64,7 @@ puts " "
 #     arr = []
 #     self.each do |el|
 #       if el.is_a?(Array)
-#         el.my_flatten
+#         arr << el.my_flatten
 #       else
 #         arr << el
 #       end
